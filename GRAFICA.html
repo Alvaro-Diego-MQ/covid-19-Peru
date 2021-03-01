@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name = "viewport" content = "width=device-width,initial-scale=1.0" >
+    <script> scr="Chart.js" </script>
+    <title>COVID-19</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <canvas id="myChart" width="300" height="150"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+       
+        labels: ['Marzo(2020)', 'Abril(2020)', 'Mayo(2020)', 'Junio(2020)', 'Julio(2020)', 'Agosto(2020)','Setiembre(2020)', 'Octubre(2020)', 'Noviembre(2020)', 'Diciembre(2020)', 'Enero(2021)', 'Febrero(2021)'],
+        datasets: [{
+            label: 'CONFIRMADOS',  
+            
+            data: [1065, 36976, 164476, 285213, 414735, 652037, 814829, 902503, 963605, 1015137, 1138239, 1329805],
+           
+            borderColor: 'red',
+            borderWidth: 5,},
+
+            {label: 'ACTIVOS',  
+            
+            data: [641, 25520, 116383 , 101001 , 111603, 167636, 105442, 42830, 32898, 26139, 51359, 57317],
+            
+            borderColor: 'yellow',
+            borderWidth: 5,
+        },
+
+        {label: 'RECUPERADOS',  
+            
+            data: [394, 10405 , 43587 , 174535 , 283915, 455457, 676925, 825197, 894741 , 951318 , 1045854, 1225994 ],
+           
+            borderColor: 'green',
+            borderWidth: 5,
+         },
+        {label: 'MUERTOS',  
+            
+            data: [3, 1051, 4506, 9677, 19217 , 28944, 32462, 34476, 35966, 37680, 41026, 46494],
+           
+            borderColor: 'black',
+            borderWidth: 5,
+        },
+        
+        
+        
+       
+    ]
+    },
+    options: {
+        
+            scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true }
+            }]     
+        },
+        title: {
+            display: true,
+            text:  [
+            'Covid-19 en el Perú por Meses',
+                  'Marzo(2020)-Febrero(2021)'],
+            fontSize: 45,
+            padding: 20,
+            fontColor: '#12619c',
+          },
+          legend: {
+            position: 'bottom', 
+            labels: {
+              fontSize: 20,
+              padding: 20,
+              boxWidth: 15,
+              fontFamily: 'Arial',
+              fontColor: 'black',
+              borderColor: [
+              'red', 'green','yellow','black'],
+            }
+          },
+          tooltips: {
+            backgroundColor: '#2271B3',
+            titleFontSize: 28,
+            xPadding: 25,
+            yPadding: 25,
+            bodyFontSize: 15,
+            bodySpacing: 10, 
+            mode: 'x',
+          },
+        
+          
+
+        
+      
+       
+    }
+});
+</script>
+
+</body>
+    
+       
+        
+         
+     
+      
+       
+   
+    
+</html 
+    
